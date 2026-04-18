@@ -133,7 +133,7 @@ $site=epic.uchicago.edu/$boost=2
 ! ============================================================================
 
 ! Affiliate/clickbait sites
-$site=*.amazon.com/*ref=*/$downrank=3
+$site=*.amazon.com/$downrank=3
 $site=pinterest.com/$downrank=3
 
 ! SEO spam patterns
@@ -143,7 +143,7 @@ $site=pinterest.com/$downrank=3
 
 ! Low-quality content farms
 $site=medium.com/$downrank=1
-$site=listicle.*/$downrank=2
+$site=*.listicle.*/$downrank=2
 
 ! ============================================================================
 ! BOOST RESULTS WITH QUALITY KEYWORDS
