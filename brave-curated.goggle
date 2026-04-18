@@ -1,0 +1,167 @@
+! name: Brave Curated - Trusted Sources
+! description: Custom ranking that boosts 84 trusted technical, business, finance, and educational sources while filtering spam
+! public: false
+! author: Brave Goggle User
+! homepage: https://github.com/gangeshg/bravegooggle
+! license: MIT
+
+! ============================================================================
+! TECH & DEVELOPMENT SOURCES - BOOST
+! ============================================================================
+
+$site=aws.amazon.com/$boost=3
+$site=docker.com/$boost=3
+$site=github.careers/$boost=3
+$site=github.blog/$boost=3
+$site=developers.google.com/$boost=3
+$site=developer.mozilla.org/$boost=3
+$site=blog.cloudflare.com/$boost=2
+$site=blog.postman.com/$boost=2
+$site=engineering.fb.com/$boost=2
+$site=netflixtechblog.com/$boost=2
+$site=thoughtworks.com/$boost=2
+$site=blog.arxiv.org/$boost=2
+$site=databricks.com/$boost=2
+$site=docs.databricks.com/$boost=2
+
+! ============================================================================
+! FINANCE & BUSINESS SOURCES - BOOST
+! ============================================================================
+
+$site=bloomberg.com/$boost=3
+$site=about.bnef.com/$boost=2
+$site=bain.com/$boost=3
+$site=bcg.com/$boost=3
+$site=mckinsey.com/$boost=3
+$site=hbr.org/$boost=3
+$site=investopedia.com/$boost=2
+$site=imf.org/$boost=3
+$site=worldbank.org/$boost=3
+$site=oecd.org/$boost=3
+$site=pwc.com/$boost=2
+$site=stripe.com/$boost=2
+$site=stripe.events/$boost=2
+$site=coinbase.com/$boost=2
+$site=razorpay.com/$boost=2
+$site=iea.org/$boost=2
+$site=uber.com/$boost=2
+$site=turing.com/$boost=2
+$site=careers.turing.com/$boost=2
+
+! ============================================================================
+! AI & RESEARCH SOURCES - BOOST
+! ============================================================================
+
+$site=anthropic.com/$boost=3
+$site=alignment.anthropic.com/$boost=3
+$site=red.anthropic.com/$boost=3
+$site=trust.anthropic.com/$boost=3
+$site=anthropic.skilljar.com/$boost=2
+$site=openai.com/$boost=3
+$site=academy.openai.com/$boost=3
+$site=developers.openai.com/$boost=3
+$site=platform.openai.com/$boost=3
+$site=status.openai.com/$boost=2
+$site=hai.stanford.edu/$boost=3
+
+! ============================================================================
+! NEWS & MEDIA SOURCES - BOOST
+! ============================================================================
+
+$site=economist.com/$boost=2
+$site=wired.com/$boost=2
+$site=livemint.com/$boost=2
+$site=thehindu.com/$boost=2
+$site=indianexpress.com/$boost=2
+$site=tldr.tech/$boost=2
+$site=blog.google/$boost=2
+$site=latent.space/$boost=2
+
+! ============================================================================
+! LEARNING & EDUCATION SOURCES - BOOST
+! ============================================================================
+
+$site=educative.io/$boost=2
+$site=pluralsight.com/$boost=2
+$site=baeldung.com/$boost=2
+$site=blog.algomaster.io/$boost=2
+$site=algomaster.io/$boost=2
+$site=blog.bytebytego.com/$boost=2
+$site=lennysnewsletter.com/$boost=2
+$site=productschool.com/$boost=2
+$site=growth.design/$boost=2
+$site=techinterviewhandbook.org/$boost=2
+
+! ============================================================================
+! PROFESSIONAL SERVICES & TECH SOURCES - BOOST
+! ============================================================================
+
+$site=a16z.com/$boost=2
+$site=ycombinator.com/$boost=3
+$site=startupschool.org/$boost=2
+$site=stratechery.com/$boost=2
+$site=waitbutwhy.com/$boost=2
+$site=consensus.app/$boost=2
+$site=greatplacetowork.com/$boost=2
+$site=naukri.com/$boost=2
+$site=epo.org/$boost=2
+
+! ============================================================================
+! INDIA-SPECIFIC SOURCES - BOOST
+! ============================================================================
+
+$site=niti.gov.in/$boost=2
+$site=prsindia.org/$boost=2
+$site=investor.sebi.gov.in/$boost=2
+$site=zerodha.com/$boost=2
+$site=coin.zerodha.com/$boost=2
+$site=zerodhafundhouse.com/$boost=2
+$site=support.zerodha.com/$boost=2
+$site=tickertape.in/$boost=2
+$site=ticker.finology.in/$boost=2
+
+! ============================================================================
+! POLICY & PUBLIC INTEREST SOURCES - BOOST
+! ============================================================================
+
+$site=publicpolicy.cornell.edu/$boost=2
+$site=epic.uchicago.in/$boost=2
+$site=epic.uchicago.edu/$boost=2
+
+! ============================================================================
+! COMMON SPAM & LOW-QUALITY DOMAINS - DOWNRANK/DISCARD
+! ============================================================================
+
+! Affiliate/clickbait sites
+$site=*.amazon.com/*ref=*/$downrank=3
+$site=pinterest.com/$downrank=3
+
+! SEO spam patterns
+/affiliate/$downrank=2
+/sponsored/$downrank=2
+/?utm_source/$downrank=2
+
+! Low-quality content farms
+$site=medium.com/$downrank=1
+$site=listicle.*/$downrank=2
+
+! ============================================================================
+! BOOST RESULTS WITH QUALITY KEYWORDS
+! ============================================================================
+
+! Boost research and whitepaper content
+/whitepaper/$boost
+/research/$boost=2
+/paper/$boost=2
+/documentation/$boost
+
+! Boost official resources and blogs
+/blog/$site=anthropic.com/$boost=2
+/blog/$site=openai.com/$boost=2
+
+! ============================================================================
+! END OF GOGGLE CONFIGURATION
+! ============================================================================
+! Last updated: 2026-04-18
+! Total sources configured: 84
+! Strategy: Boost trustworthy tech/finance/business sources, downrank spam
