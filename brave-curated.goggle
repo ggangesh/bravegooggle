@@ -1,5 +1,5 @@
-! name: Brave Curated - Trusted Sources
-! description: Custom ranking that boosts 84 trusted technical, business, finance, and educational sources while filtering spam
+! name: Brave Curated - Preferred Sources Only
+! description: PREFERRED SOURCES ONLY - Searches restricted to 84 trusted technical, business, finance, and educational sources. All other sources are blocked.
 ! public: false
 ! author: Brave Goggle User
 ! homepage: https://github.com/gangeshg/bravegooggle
@@ -160,8 +160,16 @@ $site=*.listicle.*/$downrank=2
 /blog/$site=openai.com/$boost=2
 
 ! ============================================================================
+! PREFERRED SOURCES ONLY - BLOCK NON-PREFERRED
+! ============================================================================
+
+! Extreme downrank ensures searches ONLY return results from the 84 curated sources
+! Non-preferred sources are blocked from appearing in search results
+/$downrank=100
+
+! ============================================================================
 ! END OF GOGGLE CONFIGURATION
 ! ============================================================================
 ! Last updated: 2026-04-18
 ! Total sources configured: 84
-! Strategy: Boost trustworthy tech/finance/business sources, downrank spam
+! Strategy: 84 PREFERRED SOURCES ONLY - All other sources blocked via extreme downrank
